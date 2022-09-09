@@ -29,14 +29,14 @@ export const TaskSlice = createSlice({
           el.content.mark = "✔";
           el.content.color = "green";
           el.isComplete = true;
-          return;
+          return el;
         }
       })
     },
     showall: (state, action) => {
       state.list.map(el => {
         el.content.display = "flex";
-        return;
+        return el;
       })
     },
     showcompleted: (state, action) => {
@@ -47,7 +47,7 @@ export const TaskSlice = createSlice({
         else {
           el.content.display = "none";
         }
-        return;
+        return el;
       })
     },
     showactive: (state, action) => {
@@ -58,7 +58,7 @@ export const TaskSlice = createSlice({
         else {
           el.content.display = "none";
         }
-        return;
+        return el;
       })
     },
     clearcompleted: (state, action) => {
@@ -66,7 +66,7 @@ export const TaskSlice = createSlice({
         if (el.isComplete) {
           state.list.splice(index, 1);
         }
-        return;
+        return el;
       })
     }
   },
