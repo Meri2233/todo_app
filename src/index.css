@@ -1,13 +1,89 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app{
+  position: relative;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 44px;
+  padding: 32px;
+  background-position: center;
+  height:200px;
+}
+.task-container{
+  position: absolute;
+  background-color: rgb(37,39,60);
+  right: 415px;
+  top: 170px;
+  padding:10px;
+  border-radius: 5px;
+  color:hsl(233, 11%, 84%);
+  width:435px;
+}
+.input-field{
+  background-color: rgb(37,39,60);
+  border-radius: 5px;
+  color:hsl(233, 11%, 84%);
+  width:430px;
+  height:40px;
+  font-size: 15px;
+  padding:5px;
+}
+button.action {
+  padding: 4px 8px;
+  font-size: 32px;
+  margin: 0 12px;
+}
+.task{
+  border-bottom: 1px solid gainsboro;
+  padding:6px 0;
+  opacity:0.5
+}
+.status{
+  border-radius: 50%;
+  width:18px;
+  height:18px;
+  border: 1px solid gainsboro;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-right:10px;
+}
+.task{
+  display:flex;
+  align-items: center;
+}
+.status>p{
+  font-size: 14px;
+  color:white;
+}
+.status-bar{
+  display:flex;
+  justify-content: space-between;
+  margin-top:10px;
+}
+.status-bar>p{
+  opacity:0.5;
+}
+.statusbuttons{
+  display:flex;
+  justify-content: space-between;
+  width:150px;
+}
+.blank-container{
+  background-color: rgb(24,24,36);
+  height:500px;
+}
+button{
+  background-color: transparent;
+  border: transparent;
+  color:hsl(233, 11%, 84%);
+  opacity:0.5;
+  cursor: pointer;
 }
