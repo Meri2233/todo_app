@@ -7,7 +7,7 @@ export const TaskSlice = createSlice({
       id: 333434344,
       content: {
         taskname: "dance",
-        mark: "", 
+        mark: "",
         color: "transparent",
         display: "flex"
       },
@@ -29,8 +29,8 @@ export const TaskSlice = createSlice({
           el.content.mark = "✔";
           el.content.color = "green";
           el.isComplete = true;
-          return el;
         }
+        return el;
       })
     },
     showall: (state, action) => {
